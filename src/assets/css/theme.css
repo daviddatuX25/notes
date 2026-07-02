@@ -1,0 +1,46 @@
+/* ====================================================================
+   notes.dxtechph.online — theme tokens
+   Light is the :root default. Dark is [data-theme="dark"].
+   System mode is handled by JS — it sets data-theme to the resolved
+   value before paint, so CSS never needs @media prefers-color-scheme.
+   ==================================================================== */
+
+:root {
+  /* Light theme */
+  --bg: #fafaf9;
+  --bg-subtle: #f3f3f2;
+  --text: #1a1a1a;
+  --text-muted: #6b7280;
+  --text-faint: #9ca3af;
+  --accent: #2563eb;
+  --accent-hover: #1d4ed8;
+  --border: #e5e5e4;
+  --code-bg: #f3f3f2;
+  --code-text: #1a1a1a;
+  --selection: rgba(37, 99, 235, 0.15);
+  --divider: #e5e5e4;
+  --shadow: 0 1px 3px rgba(0, 0, 0, 0.08);
+}
+
+:root[data-theme="dark"] {
+  /* Dark theme */
+  --bg: #0f0f0f;
+  --bg-subtle: #1a1a1a;
+  --text: #e5e5e5;
+  --text-muted: #9ca3af;
+  --text-faint: #6b7280;
+  --accent: #60a5fa;
+  --accent-hover: #93c5fd;
+  --border: #2a2a2a;
+  --code-bg: #1a1a1a;
+  --code-text: #e5e5e5;
+  --selection: rgba(96, 165, 250, 0.2);
+  --divider: #2a2a2a;
+  --shadow: 0 1px 3px rgba(0, 0, 0, 0.4);
+}
+
+/* Transition theme changes smoothly */
+:root,
+:root[data-theme] {
+  color-scheme: light dark;
+}

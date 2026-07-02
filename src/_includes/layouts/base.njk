@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="{{ site.language }}" data-theme="system">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>{% if title %}{{ title }} · {% endif %}{{ site.title }}</title>
+  <meta name="description" content="{{ summary or site.description }}" />
+
+  {#- Theme bootstrap: runs before CSS to prevent flash of wrong theme -#}
+  <script>
+    (function () {
+      var stored = localStorage.getItem("theme");
+      var systemDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
+      var theme = stored || (systemDark ? "dark" : "light");
+      document.documentElement.setAttribute("data-theme", theme);
+    })();
+  </script>
+
+  <link rel="stylesheet" href="/assets/css/main.css" />
+  <link rel="alternate" type="application/rss+xml" title="{{ site.title }}" href="/feed.xml" />
+  <link rel="sitemap" href="/sitemap.xml" />
+
+  {#- Favicon -#}
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+</head>
+<body>
+  <header class="site-header">
+    <a href="/" class="wordmark">{{ site.title }}</a>
+    <nav class="site-nav">
+      <button class="theme-toggle" id="theme-toggle" aria-label="Toggle theme" title="Theme (t)">
+        <span class="theme-icon" aria-hidden="true">◐</span>
+      </button>
+      <button class="help-toggle" id="help-toggle" aria-label="Keyboard shortcuts" title="Shortcuts (?)">
+        <span aria-hidden="true">?</span>
+      </button>
+    </nav>
+  </header>
+
+  <main class="site-main">
+    {{ content | safe }}
+  </main>
+
+  {#- Keyboard shortcuts modal -#}
+  <div class="modal-overlay" id="help-modal" hidden>
+    <div class="modal" role="dialog" aria-labelledby="help-title">
+      <h2 id="help-title">Keyboard shortcuts</h2>
+      <dl class="shortcut-list">
+        {% for item in site.nav %}
+          <dt><kbd>{{ item.key }}</kbd></dt>
+          <dd>{{ item.label }}</dd>
+        {% endfor %}
+      </dl>
+      <button class="modal-close" aria-label="Close">Esc to close</button>
+    </div>
+  </div>
+
+  <script src="/assets/js/theme.js"></script>
+  <script src="/assets/js/keyboard.js"></script>
+</body>
+</html>

@@ -1,0 +1,23 @@
+---
+layout: layouts/base.njk
+permalink: /
+---
+
+<div class="index-page">
+  <h1 class="index-heading">{{ site.title }}</h1>
+  <p class="index-subtitle">{{ site.description }}</p>
+
+  <ul class="post-list" data-post-nav>
+    {% for post in collections.posts %}
+      <li class="post-list-item" data-post-url="{{ post.url }}">
+        <a href="{{ post.url }}" class="post-list-link">
+          <span class="post-list-title">{{ post.data.title }}</span>
+          <span class="post-list-date">{{ post.date | readableDate }}</span>
+        </a>
+        {% if post.data.summary %}
+          <p class="post-list-summary">{{ post.data.summary }}</p>
+        {% endif %}
+      </li>
+    {% endfor %}
+  </ul>
+</div>
