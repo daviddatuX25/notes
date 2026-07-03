@@ -127,7 +127,7 @@ layout: layouts/post.njk
 **Panelist:** "Your IPO shows TAM evaluation inside the Process box. But TAM evaluates the output, not the process. Why not put TAM in Output?"
 
 **David's Bulletproof Answer:**
-> "Because TAM serves two roles in our design, panelist. The administration of TAM — the pre-test and post-test — is part of the research process that generates data. The results of TAM — the acceptance measures — are part of the Output alongside the platform itself. Process contains the act of measuring; Output contains what the measurement found. This matches our methodological structure where Chapter 3 details the evaluation procedure, and Chapter 4 reports the results."
+> "Because TAM serves two roles in our design, panelist. The administration of TAM — the pre-test and post-test — is part of the research process that generates data. The results of TAM — the acceptance measures — are part of the Output alongside the platform itself. Process contains the act of measuring; Output contains what the measurement found. This matches our methodological structure where Chapter 3 covers both the evaluation procedure and the results."
 
 ---
 
@@ -437,7 +437,7 @@ layout: layouts/post.njk
 **Panelist:** "What if your pre-test already shows high scores? If staff already think manual processing works fine, you may not detect any improvement — effectively a ceiling effect."
 
 **Christine's Bulletproof Answer:**
-> "That is a valid methodological risk, panelist. A ceiling effect would actually be informative — if evaluators already rate the manual process highly on perceived usefulness, that finding would indicate that the operational problem is not perceived as severe by staff, which is itself a meaningful result. However, our background data — 5-to-14-day scoring delays and text-message coordination — suggests low pre-test scores are more likely. We acknowledge ceiling effects as a risk and will report any observed limitations transparently in Chapter 4."
+> "That is a valid methodological risk, panelist. A ceiling effect would actually be informative — if evaluators already rate the manual process highly on perceived usefulness, that finding would indicate that the operational problem is not perceived as severe by staff, which is itself a meaningful result. However, our background data — 5-to-14-day scoring delays and text-message coordination — suggests low pre-test scores are more likely. We acknowledge ceiling effects as a risk and will report any observed limitations transparently in Chapter 3."
 
 ---
 
