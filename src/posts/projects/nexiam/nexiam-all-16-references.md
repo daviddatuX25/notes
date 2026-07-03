@@ -1,8 +1,10 @@
 ---
 title: "NEXIAM — All 16 Reference Papers Consolidated"
 date: 2026-07-03
-tags: nexiam, research, references
+tags: [nexiam, research, references]
 draft: false
+summary: "All 16 reference papers analyzed for the NEXIAM Background of the Study — APA citations, metadata, abstracts, relevance mapping, and year corrections."
+layout: layouts/post.njk
 ---
 
 All 16 papers analyzed for the NEXIAM Background of the Study.

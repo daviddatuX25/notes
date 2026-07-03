@@ -1,8 +1,10 @@
 ---
 title: "NEXIAM — Background Strengthening & Synthesis Plan"
 date: 2026-07-03
-tags: nexiam, research, writing
+tags: [nexiam, research, writing]
 draft: false
+summary: "How the 16 reference papers map to NEXIAM's five components — pluggable paragraph drafts for the Background, k-means evidence, chatbot precedents, and suggested structural changes."
+layout: layouts/post.njk
 ---
 
 ## How the 16 Papers Map to NEXIAM's Components

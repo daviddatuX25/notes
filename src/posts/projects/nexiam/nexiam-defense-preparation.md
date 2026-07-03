@@ -1,9 +1,10 @@
 ---
 title: "NEXIAM Defense Preparation — Research Logic, Background Script & Q&A"
-description: "Comprehensive defense preparation for NEXIAM: Role-Based College Admission Testing System — validation of research logic, Background script for memorization, handling the 'many features' question, and 16-reference integration."
-author: "NEXIAM Research Team"
 date: 2026-07-03
-tags: ["nexiam", "defense", "preparation", "research", "background", "qa"]
+tags: [nexiam, defense, preparation, research, background, qa]
+draft: false
+summary: "Comprehensive defense preparation for NEXIAM: validation of research logic, Background script for memorization, handling the 'many features' question, 16-reference integration map, and defense day quick reference."
+layout: layouts/post.njk
 ---
 
 # NEXIAM Defense Preparation Package
