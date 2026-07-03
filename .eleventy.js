@@ -44,7 +44,7 @@ export default function (eleventyConfig) {
   const isProduction = process.env.ELEVENTY_ENV === "production";
 
   eleventyConfig.addCollection("posts", (collectionApi) => {
-    let posts = collectionApi.getFilteredByGlob("src/posts/*.md");
+    let posts = collectionApi.getFilteredByGlob("src/posts/**/*.md");
     if (isProduction) {
       posts = posts.filter((p) => !p.data.draft);
     }
