@@ -1,21 +1,21 @@
 ---
 title: "NEXIAM v4 Proposal Defense Speaker Script"
-date: 2026-07-03
+date: 2026-07-05
 tags: [nexiam, defense, script, v4, presentation]
 draft: false
-summary: "Complete v4 speaker script for the NEXIAM proposal defense. Covers all 13 slides with presenter assignments, click-by-click narration, and defense anchors. Total runtime ~9:10."
+summary: "Complete v4 speaker script for the NEXIAM proposal defense. Covers 13 slides with presenter assignments, click-by-click narration, and defense anchors. Total runtime ~9:10."
 layout: layouts/post.njk
 ---
 
-# NEXIAM Proposal Defense Speaker Script (v4)
+# **NEXIAM Proposal Defense Speaker Script (v4)**
 
 **Target Time:** ~9:10 (leaves ~50-second buffer under the 10-minute max)
-**Speakers:** David (Slides 1-5 + 7 + 14), Jaypee (Slides 6 + 8-10), Christine (Slides 11-13)
+**Speakers:** David (Slides 1–5 + 7 + 13), Jaypee (Slides 6 + 8–9), Christine (Slides 10–12)
 **Key change from v3:** Conceptual Framework and IPO merged into one slide (Slide 5). Layer walkthrough removed. Background slides expanded. All David lines updated.
 
 ---
 
-### SLIDE 1: Title Slide (No Clicks)
+### **SLIDE 1: Title Slide (No Clicks)**
 
 **[Presenter: David]**
 *(Leave this on screen while the panel gets settled. After introductions, immediately take the floor.)*
@@ -26,7 +26,7 @@ layout: layouts/post.njk
 
 ---
 
-### SLIDE 2: The Problem — Global & National (EXPANDED)
+### **SLIDE 2: The Problem — Global & National (EXPANDED)**
 
 **[Presenter: David]**
 
@@ -42,7 +42,7 @@ layout: layouts/post.njk
 
 ---
 
-### SLIDE 3: The Problem — At ISPSC Tagudin (EXPANDED)
+### **SLIDE 3: The Problem — At ISPSC Tagudin (EXPANDED)**
 
 **[Presenter: David]**
 
@@ -60,7 +60,7 @@ layout: layouts/post.njk
 
 ---
 
-### SLIDE 4: Objectives of the Study (TRIMMED)
+### **SLIDE 4: Objectives of the Study (TRIMMED)**
 
 **[Presenter: David]**
 
@@ -76,7 +76,7 @@ layout: layouts/post.njk
 
 ---
 
-### SLIDE 5: Conceptual Framework — IPO Model (NEW, REPLACES OLD SLIDES 5+6)
+### **SLIDE 5: Conceptual Framework — IPO Model (NEW, REPLACES OLD SLIDES 5+6)**
 
 **[Presenter: David]**
 
@@ -94,7 +94,7 @@ layout: layouts/post.njk
 
 ---
 
-### SLIDE 6: Scope and Limitation
+### **SLIDE 6: Scope and Limitation**
 
 **[Presenter: Jaypee]**
 
@@ -108,7 +108,7 @@ layout: layouts/post.njk
 
 ---
 
-### SLIDE 7: Beneficiaries
+### **SLIDE 7: Beneficiaries**
 
 **[Presenter: David]**
 
@@ -124,33 +124,21 @@ layout: layouts/post.njk
 
 ---
 
-### SLIDE 8: Research Design
+### **SLIDE 8: Research Design & Software Model**
 
 **[Presenter: Jaypee]**
 
-**Jaypee:** "Our research design is descriptive-developmental, following Frey 2022."
+**Jaypee:** "For our software model, we utilized AI-Augmented Rapid Application Development."
 
-*(Click 1 — Descriptive Phase)* "We diagnose first — analyze the current manual workflow, extract pain points through thematic analysis, and convert validated gaps into system requirements."
+*(Gesture to the stats under the header)* "If anyone wonders whether 'AI-augmented' is a novelty, Osmani's 2026 Google whitepaper confirms that 85% of professional developers now use AI coding agents regularly, and 41% of new code industry-wide is AI-generated. We are simply building at the modern industry standard."
 
-*(Click 2 — Developmental Phase)* "Then we build and evaluate — construct NEXIAM through AI-Augmented RAD, then measure user acceptance with a paired TAM pre-test and post-test. The question is whether NEXIAM significantly outperforms the manual process."
+*(Click through the 4 phases)* "We map requirements, design user interfaces, rapidly construct the codebase, and cutover for evaluation."
 
----
-
-### SLIDE 9: Software Model
-
-**[Presenter: Jaypee]**
-
-**Jaypee:** "We use AI-Augmented Rapid Application Development — four phases."
-
-*(Gesture to the stats graphic)* "The numbers on screen speak for themselves. Osmani's 2026 Google whitepaper documents this shift — AI agents now generate the majority of routine implementation work. The modern industry standard."
-
-*(Click through phases)* "Requirements Planning. User Design. Rapid Construction. Cutover."
-
-*(Click to show loop)* "Crucially, AI generates code, but it is routed through a human Review and Integrate step. If it fails, it loops back. AI writes; a human decides what ships."
+*(Click to show loop)* "Crucially, AI generates code, but it is routed through a human 'Review and Integrate' step. If it fails, it loops back. AI writes; a human decides what ships."
 
 ---
 
-### SLIDE 10: Project Plan
+### **SLIDE 9: Project Plan**
 
 **[Presenter: Jaypee]**
 
@@ -160,21 +148,21 @@ layout: layouts/post.njk
 
 ---
 
-### SLIDE 11: Population and Locale
+### **SLIDE 10: Population and Locale**
 
 **[Presenter: Christine]**
 
-**Christine:** "Thank you, Jaypee. To evaluate the system in September, we will use 47 purposive evaluators."
+**Christine:** "Thank you, Jaypee. To evaluate the system in September, we will use 47 evaluators."
 
-*(Click 1)* "This breaks down into students, program heads, registrar staff, guidance, and one IT expert."
+*(Click 1)* "This breaks down into students, program heads, registrar staff, guidance, and IT experts."
 
 *(Click 2)* "Because our evaluation happens in September — which has no active admission cycle — these are proxy evaluators simulating real-world scenarios."
 
-*(Click 3)* "The 46 evaluators in the operational panel assess the day-to-day workflow using TAM. The single IT expert separately evaluates backend architecture, security matrices, and data privacy compliance through a structured technical walkthrough — reported qualitatively. Because n=1, no inferential statistics apply to the IT expert's responses."
+*(Click 3)* "Notice we split the 47 into two distinct panels: An Operational Panel of 46 simulates the admission use cases, while a Technical Panel of 1 IT expert specifically evaluates backend architecture and security. Different questions require different evaluators."
 
 ---
 
-### SLIDE 12: Research Instrument (TAM)
+### **SLIDE 11: Research Instrument (TAM)**
 
 **[Presenter: Christine]**
 
@@ -186,7 +174,7 @@ layout: layouts/post.njk
 
 ---
 
-### SLIDE 13: Data Analysis Techniques
+### **SLIDE 12: Data Analysis Techniques**
 
 **[Presenter: Christine]**
 
@@ -202,7 +190,7 @@ layout: layouts/post.njk
 
 ---
 
-### SLIDE 14: Closing
+### **SLIDE 13: Closing**
 
 **[Presenter: David]**
 
@@ -210,58 +198,33 @@ layout: layouts/post.njk
 
 ---
 
-### Time Budget
+### **Time Budget**
 
 | Slide | Presenter | Time |
 |-------|-----------|------|
-| Slide 1: Title | David | -- |
+| Slide 1: Title | David | — |
 | Slide 2: Problem — Global | **David** | **~1:10** |
 | Slide 3: Problem — Local | **David** | **~1:10** |
 | Slide 4: Objectives | **David** | **~0:30** |
 | Slide 5: IPO Framework | **David** | **~0:35** |
 | Slide 6: Scope/Limitation | Jaypee | ~1:15 |
 | Slide 7: Beneficiaries | **David** | **~0:40** |
-| Slide 8: Research Design | Jaypee | ~0:30 |
-| Slide 9: Software Model | Jaypee | ~0:50 |
-| Slide 10: Project Plan | Jaypee | ~0:30 |
-| Slide 11: Population | Christine | ~1:00 |
-| Slide 12: Instrument | Christine | ~0:45 |
-| Slide 13: Data Analysis | Christine | ~1:00 |
-| Slide 14: Closing | David | ~0:10 |
-| **Total** | | **~9:15** |
-| Buffer vs 10-min limit | | **~0:45** |
+| Slide 8: Research Design | Jaypee | ~1:15 |
+| Slide 9: Project Plan | Jaypee | ~0:30 |
+| Slide 10: Population | Christine | ~1:00 |
+| Slide 11: Instrument | Christine | ~0:45 |
+| Slide 12: Data Analysis | Christine | ~1:00 |
+| Slide 13: Closing | David | ~0:10 |
+| **Total** | | **~9:10** ✅ |
+| Buffer vs 10-min limit | | **~0:50** |
 
-**David's total:** ~4:15
-**Jaypee's total:** ~3:05 (was ~3:00 — added ~5 seconds for methodology slide)
-**Total clicks:** ~35 (was ~32)
+**David's total: ~4:15** (was ~5:05 in v3 — saving ~50 seconds)
+**Total clicks: ~32** (was ~40 in v3 — simpler flow)
 
 ---
 
-### Speaker Notes Quick Card
+### **Next Steps**
 
-**David's 5 slides to memorize cold:**
-1. Slide 2 (Problem Global) — Lira, RA 10931, Adwan, RA 10173
-2. Slide 3 (Problem Local) — 700-1k applicants, 5-14 day scoring, Facebook, text gap
-3. Slide 4 (Objectives) — SO1 through SO4 dependency chain
-4. Slide 5 (IPO) — Input/Process/Output with RAD + TAM nested in Process
-5. Slide 7 (Beneficiaries) — Three groups, fast pass
-
-**Jaypee's defense core:**
-- Research design: descriptive-developmental (Frey 2022), diagnose then build
-- Cloud vs offline: proctoring-only failsafe via service-worker caching
-- OMR: perspective correction before contour detection
-- AI-augmented RAD: human-in-the-loop review and integrate
-
-**Christine's defense core:**
-- Proxy evaluators: calendar constraint, fully acknowledged (n=47, 1 IT expert)
-- Statistical path: Shapiro-Wilk then t-test or Wilcoxon
-- Hawthorne effect: anonymized + stress-test framing
-
----
-
-### Next Steps
-
-1. Practice with a stopwatch — the split methodology slide adds ~5 seconds to Jaypee's section.
+1. Practice with a stopwatch — the expanded background slides need slightly faster delivery than the old version.
 2. Once comfortable, drill the Q&A Defense Bank (v4) for every possible panel question.
-3. Edit NEXIAM.odp: split old Slide 8 into two — Slide 8 (Research Design) and Slide 9 (Software Model with AI stats graphic). Renumber slides 9-13 to 10-14.
-4. **New Section 4 added to Q&A bank (Traps 51-56):** methodology challenges covering why descriptive-developmental, not experimental, and the pre-test/post-test justification.
+3. Edit NEXIAM.odp: merge old slides 5+6 into one IPO slide, update slides 2-3 text.
