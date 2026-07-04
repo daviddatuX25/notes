@@ -152,13 +152,13 @@ layout: layouts/post.njk
 
 **[Presenter: Christine]**
 
-**Christine:** "Thank you, Jaypee. To evaluate the system in September, we will use 49 purposive evaluators."
+**Christine:** "Thank you, Jaypee. To evaluate the system in September, we will use 47 purposive evaluators."
 
-*(Click 1)* "This breaks down into students, program heads, registrar staff, guidance, and IT experts."
+*(Click 1)* "This breaks down into students, program heads, registrar staff, guidance, and one IT expert."
 
 *(Click 2)* "Because our evaluation happens in September — which has no active admission cycle — these are proxy evaluators simulating real-world scenarios."
 
-*(Click 3)* "Notice we split the 49 into two distinct panels: An Operational Panel of 46 simulates the day-to-day workflow, while a Technical Panel of 3 IT experts specifically evaluates backend architecture and security. Different questions require different evaluators."
+*(Click 3)* "The 46 evaluators in the operational panel assess the day-to-day workflow using TAM. The single IT expert separately evaluates backend architecture, security matrices, and data privacy compliance through a structured technical walkthrough — reported qualitatively. Because n=1, no inferential statistics apply to the IT expert's responses."
 
 ---
 
