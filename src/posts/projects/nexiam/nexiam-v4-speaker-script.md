@@ -10,7 +10,7 @@ layout: layouts/post.njk
 # NEXIAM Proposal Defense Speaker Script (v4)
 
 **Target Time:** ~9:10 (leaves ~50-second buffer under the 10-minute max)
-**Speakers:** David (Slides 1-5 + 7 + 13), Jaypee (Slides 6 + 8-9), Christine (Slides 10-12)
+**Speakers:** David (Slides 1-5 + 7 + 14), Jaypee (Slides 6 + 8-10), Christine (Slides 11-13)
 **Key change from v3:** Conceptual Framework and IPO merged into one slide (Slide 5). Layer walkthrough removed. Background slides expanded. All David lines updated.
 
 ---
@@ -124,21 +124,33 @@ layout: layouts/post.njk
 
 ---
 
-### SLIDE 8: Research Design & Software Model
+### SLIDE 8: Research Design
 
 **[Presenter: Jaypee]**
 
-**Jaypee:** "For our software model, we utilized AI-Augmented Rapid Application Development."
+**Jaypee:** "Our research design is descriptive-developmental, following Frey 2022."
 
-*(Gesture to the stats under the header)* "Osmani's 2026 Google whitepaper documents the industry shift toward agentic engineering — where AI agents generate the majority of routine implementation work while developers focus on architectural oversight and complex edge cases. We are simply building at the modern industry standard."
+*(Click 1 — Descriptive Phase)* "We diagnose first — analyze the current manual workflow, extract pain points through thematic analysis, and convert validated gaps into system requirements."
 
-*(Click through the 4 phases)* "We map requirements, design user interfaces, rapidly construct the codebase, and cutover for evaluation."
-
-*(Click to show loop)* "Crucially, AI generates code, but it is routed through a human 'Review and Integrate' step. If it fails, it loops back. AI writes; a human decides what ships."
+*(Click 2 — Developmental Phase)* "Then we build and evaluate — construct NEXIAM through AI-Augmented RAD, then measure user acceptance with a paired TAM pre-test and post-test. The question is whether NEXIAM significantly outperforms the manual process."
 
 ---
 
-### SLIDE 9: Project Plan
+### SLIDE 9: Software Model
+
+**[Presenter: Jaypee]**
+
+**Jaypee:** "We use AI-Augmented Rapid Application Development — four phases."
+
+*(Gesture to the stats graphic)* "The numbers on screen speak for themselves. Osmani's 2026 Google whitepaper documents this shift — AI agents now generate the majority of routine implementation work. The modern industry standard."
+
+*(Click through phases)* "Requirements Planning. User Design. Rapid Construction. Cutover."
+
+*(Click to show loop)* "Crucially, AI generates code, but it is routed through a human Review and Integrate step. If it fails, it loops back. AI writes; a human decides what ships."
+
+---
+
+### SLIDE 10: Project Plan
 
 **[Presenter: Jaypee]**
 
@@ -148,7 +160,7 @@ layout: layouts/post.njk
 
 ---
 
-### SLIDE 10: Population and Locale
+### SLIDE 11: Population and Locale
 
 **[Presenter: Christine]**
 
@@ -162,7 +174,7 @@ layout: layouts/post.njk
 
 ---
 
-### SLIDE 11: Research Instrument (TAM)
+### SLIDE 12: Research Instrument (TAM)
 
 **[Presenter: Christine]**
 
@@ -174,7 +186,7 @@ layout: layouts/post.njk
 
 ---
 
-### SLIDE 12: Data Analysis Techniques
+### SLIDE 13: Data Analysis Techniques
 
 **[Presenter: Christine]**
 
@@ -190,7 +202,7 @@ layout: layouts/post.njk
 
 ---
 
-### SLIDE 13: Closing
+### SLIDE 14: Closing
 
 **[Presenter: David]**
 
@@ -209,17 +221,19 @@ layout: layouts/post.njk
 | Slide 5: IPO Framework | **David** | **~0:35** |
 | Slide 6: Scope/Limitation | Jaypee | ~1:15 |
 | Slide 7: Beneficiaries | **David** | **~0:40** |
-| Slide 8: Research Design | Jaypee | ~1:15 |
-| Slide 9: Project Plan | Jaypee | ~0:30 |
-| Slide 10: Population | Christine | ~1:00 |
-| Slide 11: Instrument | Christine | ~0:45 |
-| Slide 12: Data Analysis | Christine | ~1:00 |
-| Slide 13: Closing | David | ~0:10 |
-| **Total** | | **~9:10** |
-| Buffer vs 10-min limit | | **~0:50** |
+| Slide 8: Research Design | Jaypee | ~0:30 |
+| Slide 9: Software Model | Jaypee | ~0:50 |
+| Slide 10: Project Plan | Jaypee | ~0:30 |
+| Slide 11: Population | Christine | ~1:00 |
+| Slide 12: Instrument | Christine | ~0:45 |
+| Slide 13: Data Analysis | Christine | ~1:00 |
+| Slide 14: Closing | David | ~0:10 |
+| **Total** | | **~9:15** |
+| Buffer vs 10-min limit | | **~0:45** |
 
-**David's total:** ~4:15 (was ~5:05 in v3 -- saving ~50 seconds)
-**Total clicks:** ~32 (was ~40 in v3 -- simpler flow)
+**David's total:** ~4:15
+**Jaypee's total:** ~3:05 (was ~3:00 — added ~5 seconds for methodology slide)
+**Total clicks:** ~35 (was ~32)
 
 ---
 
@@ -233,12 +247,13 @@ layout: layouts/post.njk
 5. Slide 7 (Beneficiaries) — Three groups, fast pass
 
 **Jaypee's defense core:**
+- Research design: descriptive-developmental (Frey 2022), diagnose then build
 - Cloud vs offline: proctoring-only failsafe via service-worker caching
 - OMR: perspective correction before contour detection
 - AI-augmented RAD: human-in-the-loop review and integrate
 
 **Christine's defense core:**
-- Proxy evaluators: calendar constraint, fully acknowledged
+- Proxy evaluators: calendar constraint, fully acknowledged (n=47, 1 IT expert)
 - Statistical path: Shapiro-Wilk then t-test or Wilcoxon
 - Hawthorne effect: anonymized + stress-test framing
 
@@ -246,7 +261,7 @@ layout: layouts/post.njk
 
 ### Next Steps
 
-1. Practice with a stopwatch — the expanded background slides need slightly faster delivery than the old version.
+1. Practice with a stopwatch — the split methodology slide adds ~5 seconds to Jaypee's section.
 2. Once comfortable, drill the Q&A Defense Bank (v4) for every possible panel question.
-3. Edit NEXIAM.odp: merge old slides 5+6 into one IPO slide, update slides 2-3 text.
+3. Edit NEXIAM.odp: split old Slide 8 into two — Slide 8 (Research Design) and Slide 9 (Software Model with AI stats graphic). Renumber slides 9-13 to 10-14.
 4. **New Section 4 added to Q&A bank (Traps 51-56):** methodology challenges covering why descriptive-developmental, not experimental, and the pre-test/post-test justification.
