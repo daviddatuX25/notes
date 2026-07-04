@@ -130,7 +130,7 @@ layout: layouts/post.njk
 
 **Jaypee:** "For our software model, we utilized AI-Augmented Rapid Application Development."
 
-*(Gesture to the stats under the header)* "If anyone wonders whether 'AI-augmented' is a novelty, Osmani's 2026 Google whitepaper confirms that 85% of professional developers now use AI coding agents regularly, and 41% of new code industry-wide is AI-generated. We are simply building at the modern industry standard."
+*(Gesture to the stats under the header)* "Osmani's 2026 Google whitepaper documents the industry shift toward agentic engineering — where AI agents generate the majority of routine implementation work while developers focus on architectural oversight and complex edge cases. We are simply building at the modern industry standard."
 
 *(Click through the 4 phases)* "We map requirements, design user interfaces, rapidly construct the codebase, and cutover for evaluation."
 
