@@ -30,7 +30,7 @@ layout: layouts/post.njk
 
 **[Presenter: David]**
 
-**David:** "Manual, paper-based admission testing is not just slow — it creates real integrity risks and equity gaps for applicants who cannot afford repeat trips to campus."
+**David:** "Manual, paper-based admission testing creates a compounding bottleneck. Hand-scoring burns up to two weeks per cycle. Every downstream decision — course placement, scholarship eligibility, enrollment planning — stalls behind that delay. The process itself is the bottleneck."
 
 *(Click 1)* "Globally, higher education is shifting to AI-assisted, cloud-based admission platforms. Lira et al., publishing in *Science Advances*, demonstrated that machine learning models can assess applicant qualities with outcomes tied to long-term success. The AI-admissions space is validated at the highest level."
 
@@ -116,7 +116,7 @@ layout: layouts/post.njk
 
 *(Click 1)* "The Institution gains a faster, legally compliant admission process."
 
-*(Click 2)* "Applicants gain a 24/7 portal, closing the equity gap of repeat physical trips to campus."
+*(Click 2)* "Applicants gain a 24/7 portal. Results that once took up to two weeks to appear on a Facebook page arrive the moment scoring completes. No more waiting, no more uncertainty."
 
 *(Click 3)* "And the Research Community gains a deployable blueprint for regional state colleges."
 
