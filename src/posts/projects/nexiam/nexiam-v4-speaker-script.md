@@ -30,7 +30,7 @@ layout: layouts/post.njk
 
 **[Presenter: David]**
 
-**David:** "Manual, paper-based admission testing creates a compounding bottleneck. Hand-scoring burns up to two weeks per cycle. Every downstream decision — course placement, scholarship eligibility, enrollment planning — stalls behind that delay. The process itself is the bottleneck."
+**David:** "Manual, paper-based admission testing creates a compounding bottleneck. Slow hand-scoring means delayed results. Delayed results mean stalled decisions — course placement, scholarship, enrollment planning all wait on a process that cannot scale. The process itself is the bottleneck."
 
 *(Click 1)* "Globally, higher education is shifting to AI-assisted, cloud-based admission platforms. Lira et al., publishing in *Science Advances*, demonstrated that machine learning models can assess applicant qualities with outcomes tied to long-term success. The AI-admissions space is validated at the highest level."
 
