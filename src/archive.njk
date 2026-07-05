@@ -1,0 +1,31 @@
+---
+layout: layouts/base.njk
+permalink: /archive/
+title: Archive
+---
+
+<div class="archive-page">
+  <h1>Archive</h1>
+  <p class="index-subtitle">All notes, newest first.</p>
+
+  <ul class="post-list" data-post-nav>
+    {% for post in collections.posts %}
+      <li class="post-list-item" data-post-url="{{ post.url }}">
+        <a href="{{ post.url }}" class="post-list-link">
+          <span class="post-list-title">{{ post.data.title }}</span>
+          <span class="post-list-date">{{ post.date | readableDate }}</span>
+        </a>
+        {% if post.data.summary %}
+          <p class="post-list-summary">{{ post.data.summary }}</p>
+        {% endif %}
+        {% if post.data.tags %}
+          <p class="post-list-tags">
+            {% for tag in post.data.tags | filterTagList %}
+              <a href="/tags/{{ tag | slugify }}/" class="tag-link-inline">#{{ tag }}</a>
+            {% endfor %}
+          </p>
+        {% endif %}
+      </li>
+    {% endfor %}
+  </ul>
+</div>

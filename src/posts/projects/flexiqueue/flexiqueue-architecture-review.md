@@ -1,7 +1,7 @@
 ---
 title: "FlexiQueue Architecture Review"
 date: 2026-07-02
-tags: flexiqueue, architecture, refactor, codebase-design, session-service
+tags: [flexiqueue, architecture, refactor, codebase-design, session-service]
 summary: "Codebase architecture review of FlexiQueue using the improve-codebase-architecture methodology. Five candidates identified with before/after diagrams. Top recommendation: decompose SessionService (1,261 lines, god module)."
 layout: layouts/post.njk
 ---

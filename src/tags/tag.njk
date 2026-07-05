@@ -1,0 +1,41 @@
+---js
+// One page per tag. Uses Eleventy pagination to fan out across every tag
+// in the site. Pattern from eleventy-base-blog.
+const pagination = {
+  data: "collections",
+  size: 1,
+  alias: "tag",
+  filter: ["all", "posts"],
+};
+
+const eleventyExcludeFromCollections = true;
+
+const eleventyComputed = {
+  title: "Tagged '{{ tag }}'",
+  permalink: function (data) {
+    // If DuplicatePermalinkOutputError occurs, check that no tag occurs
+    // with differing case, e.g. "RSS" and "rss".
+    return `/tags/${this.slugify(data.tag)}/`;
+  },
+};
+---
+<h1>Tagged &ldquo;{{ tag }}&rdquo;</h1>
+
+<p class="archive-count">
+  {{ collections[tag] | length }} note{% if collections[tag].length != 1 %}s{% endif %}
+</p>
+
+<ol class="postlist" reversed data-post-nav>
+  {%- for post in collections[tag] | reverse %}
+    <li class="postlist-item{% if post.url == page.url %} postlist-item-active{% endif %}">
+      <a href="{{ post.url }}" class="postlist-link">
+        {{ post.data.title }}
+      </a>
+      <time class="postlist-date" datetime="{{ post.date | isoDate }}">
+        {{ post.date | readableDate }}
+      </time>
+    </li>
+  {%- endfor %}
+</ol>
+
+<p><a href="/tags/" class="back-link">← All tags</a></p>

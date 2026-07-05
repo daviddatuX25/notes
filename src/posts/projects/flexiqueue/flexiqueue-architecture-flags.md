@@ -1,7 +1,7 @@
 ---
 title: "FlexiQueue — Full Architecture Flags"
 date: 2026-07-02
-tags: flexiqueue, architecture, rbac, multitenancy, edge, refactor
+tags: [flexiqueue, architecture, rbac, multitenancy, edge, refactor]
 summary: "Complete inventory of all architectural issues found in FlexiQueue: RBAC ambiguity, multitenancy bolt-on, central-edge sync overlap, god modules, and settings sprawl."
 layout: layouts/post.njk
 ---

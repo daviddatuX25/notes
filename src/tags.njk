@@ -1,0 +1,20 @@
+---
+layout: layouts/base.njk
+permalink: /tags/
+title: Tags
+---
+
+<div class="tags-page">
+  <h1>Tags</h1>
+  <p class="index-subtitle">Browse notes by topic.</p>
+
+  <ul class="tag-list">
+    {%- for tag in collections | getKeys | filterTagList | sortAlphabetically %}
+      {% set tagUrl %}/tags/{{ tag | slugify }}/{% endset %}
+      <li class="tag-list-item">
+        <a href="{{ tagUrl }}" class="tag-link">{{ tag }}</a>
+        <span class="tag-count">{{ collections[tag].length }}</span>
+      </li>
+    {%- endfor %}
+  </ul>
+</div>

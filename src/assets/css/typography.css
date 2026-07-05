@@ -489,6 +489,278 @@ kbd {
 }
 
 /* ====================================================================
+   Site nav links (archive / tags in the header)
+   ==================================================================== */
+
+.site-nav-link {
+  font-family: var(--font-ui);
+  font-size: var(--text-sm);
+  color: var(--text-muted);
+  text-decoration: none;
+  padding: var(--space-2);
+  border-radius: 4px;
+  transition: color 0.15s, background 0.15s;
+}
+
+.site-nav-link:hover {
+  color: var(--text);
+  background: var(--bg-subtle);
+}
+
+/* ====================================================================
+   Index nav (sub-nav on the home page)
+   ==================================================================== */
+
+.index-nav {
+  display: flex;
+  gap: var(--space-4);
+  margin-top: calc(-1 * var(--space-6));
+  margin-bottom: var(--space-6);
+}
+
+.index-nav-link {
+  font-family: var(--font-ui);
+  font-size: var(--text-sm);
+  color: var(--accent);
+  text-decoration: none;
+  border-bottom: 1px solid var(--border);
+}
+
+.index-nav-link:hover {
+  border-bottom-color: var(--accent);
+}
+
+/* ====================================================================
+   Post groups (project sections on the index)
+   ==================================================================== */
+
+.post-group {
+  margin-bottom: var(--space-8);
+}
+
+.post-group-heading {
+  font-family: var(--font-ui);
+  font-size: var(--text-lg);
+  font-weight: 600;
+  letter-spacing: -0.01em;
+  margin-bottom: var(--space-2);
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+}
+
+.post-group-count {
+  font-family: var(--font-ui);
+  font-size: var(--text-xs);
+  color: var(--text-faint);
+  font-weight: 400;
+  background: var(--bg-subtle);
+  padding: 1px 8px;
+  border-radius: 10px;
+}
+
+.post-group-badge {
+  font-family: var(--font-ui);
+  font-size: var(--text-xs);
+  color: #b45309;
+  background: rgba(180, 83, 9, 0.1);
+  padding: 1px 8px;
+  border-radius: 10px;
+  font-weight: 500;
+  text-transform: lowercase;
+  letter-spacing: 0.02em;
+}
+
+:root[data-theme="dark"] .post-group-badge {
+  color: #fbbf24;
+  background: rgba(251, 191, 36, 0.12);
+}
+
+/* ====================================================================
+   Tag links (inline, on archive + index)
+   ==================================================================== */
+
+.post-list-tags {
+  margin-top: var(--space-2);
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-2);
+}
+
+.tag-link-inline,
+.tag-link {
+  font-family: var(--font-ui);
+  font-size: var(--text-xs);
+  color: var(--text-muted);
+  text-decoration: none;
+  border-bottom: 1px solid transparent;
+  transition: color 0.15s, border-color 0.15s;
+}
+
+.tag-link-inline:hover,
+.tag-link:hover {
+  color: var(--accent);
+  border-bottom-color: var(--accent);
+}
+
+.post-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-3);
+}
+
+/* ====================================================================
+   Tag index page (/tags/)
+   ==================================================================== */
+
+.tags-page h1,
+.archive-page h1 {
+  font-family: var(--font-ui);
+  font-size: var(--text-xl);
+  font-weight: 600;
+  letter-spacing: -0.02em;
+  margin-bottom: var(--space-4);
+}
+
+.tag-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  border-top: 1px solid var(--border);
+}
+
+.tag-list-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  padding: var(--space-4) 0;
+  border-bottom: 1px solid var(--border);
+}
+
+.tag-list-item .tag-link {
+  font-family: var(--font-ui);
+  font-size: var(--text-base);
+  color: var(--text);
+  text-decoration: none;
+  border: none;
+  font-weight: 500;
+}
+
+.tag-list-item .tag-link:hover {
+  color: var(--accent);
+}
+
+.tag-count {
+  font-family: var(--font-ui);
+  font-size: var(--text-xs);
+  color: var(--text-faint);
+  background: var(--bg-subtle);
+  padding: 1px 8px;
+  border-radius: 10px;
+}
+
+/* ====================================================================
+   Tag detail page (/tags/<tag>/)
+   ==================================================================== */
+
+.postlist {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+}
+
+.postlist-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: var(--space-4);
+  padding: var(--space-4) 0;
+  border-bottom: 1px solid var(--border);
+}
+
+.postlist-item:last-child {
+  border-bottom: none;
+}
+
+.postlist-link {
+  font-family: var(--font-ui);
+  font-size: var(--text-base);
+  color: var(--text);
+  text-decoration: none;
+  font-weight: 500;
+  flex: 1;
+}
+
+.postlist-link:hover {
+  color: var(--accent);
+}
+
+.postlist-date {
+  font-family: var(--font-ui);
+  font-size: var(--text-xs);
+  color: var(--text-faint);
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+
+.postlist-item-active .postlist-link {
+  color: var(--accent);
+}
+
+.archive-count {
+  font-family: var(--font-ui);
+  font-size: var(--text-sm);
+  color: var(--text-faint);
+  margin-top: calc(-1 * var(--space-3));
+  margin-bottom: var(--space-6);
+}
+
+.back-link {
+  font-family: var(--font-ui);
+  font-size: var(--text-sm);
+  color: var(--text-muted);
+  text-decoration: none;
+  border: none;
+  margin-top: var(--space-8);
+  display: inline-block;
+}
+
+.back-link:hover {
+  color: var(--accent);
+}
+
+/* ====================================================================
+   Private / protected posts
+   ==================================================================== */
+
+.private-badge {
+  display: inline-block;
+  font-family: var(--font-ui);
+  font-size: var(--text-xs);
+  color: #b45309;
+  background: rgba(180, 83, 9, 0.1);
+  padding: 2px 10px;
+  border-radius: 10px;
+  font-weight: 500;
+  text-transform: lowercase;
+  letter-spacing: 0.02em;
+  margin-left: var(--space-3);
+  vertical-align: middle;
+}
+
+:root[data-theme="dark"] .private-badge {
+  color: #fbbf24;
+  background: rgba(251, 191, 36, 0.12);
+}
+
+.post-private .post-title {
+  /* Pull the badge up a bit so it visually aligns with the title baseline */
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+/* ====================================================================
    Code blocks (syntax highlight plugin adds .token classes)
    ==================================================================== */
 

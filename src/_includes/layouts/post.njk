@@ -2,8 +2,11 @@
 layout: layouts/base.njk
 ---
 
-<article class="post">
-  <h1 class="post-title">{{ title }}</h1>
+<article class="post {% if isPrivate %}post-private{% endif %}">
+  <h1 class="post-title">
+    {{ title }}
+    {% if isPrivate %}<span class="private-badge" title="This post is behind HTTP basic auth">protected</span>{% endif %}
+  </h1>
 
   <div class="post-body">
     {{ content | safe }}
@@ -15,8 +18,8 @@ layout: layouts/base.njk
       <span class="post-date">{{ date | readableDate }}</span>
       {% if tags and tags.length %}
         <span class="post-tags">
-          {% for tag in tags %}
-            <span class="tag">#{{ tag }}</span>
+          {% for tag in tags | filterTagList %}
+            <a href="/tags/{{ tag | slugify }}/" class="tag-link">#{{ tag }}</a>
           {% endfor %}
         </span>
       {% endif %}

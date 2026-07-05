@@ -2,6 +2,8 @@
    Keyboard shortcuts
    j / k   — next / previous post (chronological)
    g g     — go to index (press g twice within 500ms)
+   g t     — go to tags
+   g a     — go to archive
    t       — toggle theme
    ?       — show keyboard shortcuts modal
    Esc     — close modal
@@ -12,8 +14,24 @@
   const helpToggle = document.getElementById("help-toggle");
   const themeToggle = document.getElementById("theme-toggle");
 
-  let gPressTimer = null;
-  let gPressCount = 0;
+  // Sequence-based shortcuts: press g then t/a/g within 500ms
+  let prefixKey = null;
+  let prefixTimer = null;
+
+  const PREFIX_TIMEOUT = 500;
+  const SEQUENCES = {
+    "g-t": "/tags/",
+    "g-a": "/archive/",
+    "g-g": "/",
+  };
+
+  function resetPrefix() {
+    prefixKey = null;
+    if (prefixTimer) {
+      clearTimeout(prefixTimer);
+      prefixTimer = null;
+    }
+  }
 
   function isTextInput(el) {
     return (
@@ -31,36 +49,17 @@
     if (helpModal) helpModal.removeAttribute("hidden");
   }
 
-  // Collect all post links on the page (post-nav or index list)
-  function getPostLinks() {
-    const nav = document.querySelector("[data-post-nav]");
-    if (!nav) return [];
-    return Array.from(nav.querySelectorAll('a[href]'));
-  }
-
-  // Find current post URL (on post pages, the canonical link)
-  function currentPostIndex(links) {
-    // On a post page, there's no "current" in the list, but
-    // post-nav-links has prev/next. On index, the list items have
-    // data-post-url. We handle both:
-    const items = document.querySelectorAll("[data-post-url]");
-    if (items.length === 0) return -1;
-
-    // Find which item matches the current URL
-    const currentUrl = window.location.pathname;
-    for (let i = 0; i < items.length; i++) {
-      if (items[i].getAttribute("data-post-url") === currentUrl) return i;
-    }
-    return -1;
-  }
-
   document.addEventListener("keydown", function (e) {
     // Never intercept when typing in a field
     if (isTextInput(e.target)) return;
 
+    // Ignore modified keys (Ctrl/Cmd/Alt) — don't hijack browser shortcuts
+    if (e.ctrlKey || e.metaKey || e.altKey) return;
+
     // Esc — close modal
     if (e.key === "Escape") {
       closeModal();
+      resetPrefix();
       return;
     }
 
@@ -68,37 +67,39 @@
     if (e.key === "?") {
       e.preventDefault();
       openModal();
+      resetPrefix();
       return;
     }
 
-    // t — toggle theme
-    if (e.key === "t" && !e.ctrlKey && !e.metaKey) {
+    // t (alone) — toggle theme
+    if (e.key === "t" && !prefixKey) {
       e.preventDefault();
       if (themeToggle) themeToggle.click();
       return;
     }
 
-    // g — double press for "go to index"
-    if (e.key === "g" && !e.ctrlKey && !e.metaKey) {
-      gPressCount++;
-      if (gPressCount === 1) {
-        gPressTimer = setTimeout(function () {
-          gPressCount = 0;
-        }, 500);
-      } else if (gPressCount === 2) {
-        clearTimeout(gPressTimer);
-        gPressCount = 0;
-        window.location.href = "/";
+    // Sequence handling: g + t / g + a / g + g
+    if (prefixKey === "g") {
+      const seq = "g-" + e.key;
+      if (SEQUENCES[seq]) {
+        e.preventDefault();
+        window.location.href = SEQUENCES[seq];
+        resetPrefix();
+        return;
       }
+      // Unknown follow-up — drop the prefix
+      resetPrefix();
+    }
+
+    if (e.key === "g") {
+      e.preventDefault();
+      prefixKey = "g";
+      prefixTimer = setTimeout(resetPrefix, PREFIX_TIMEOUT);
       return;
     }
 
     // j / k — next / prev post navigation
     if (e.key === "j" || e.key === "k") {
-      const links = getPostLinks();
-      if (links.length === 0) return;
-
-      // On post pages, use the post-nav-links (prev/next)
       const prevLink = document.querySelector(".post-nav-prev");
       const nextLink = document.querySelector(".post-nav-next");
 

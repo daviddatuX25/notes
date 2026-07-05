@@ -7,17 +7,43 @@ permalink: /
   <h1 class="index-heading">{{ site.title }}</h1>
   <p class="index-subtitle">{{ site.description }}</p>
 
-  <ul class="post-list" data-post-nav>
-    {% for post in collections.posts %}
-      <li class="post-list-item" data-post-url="{{ post.url }}">
-        <a href="{{ post.url }}" class="post-list-link">
-          <span class="post-list-title">{{ post.data.title }}</span>
-          <span class="post-list-date">{{ post.date | readableDate }}</span>
-        </a>
-        {% if post.data.summary %}
-          <p class="post-list-summary">{{ post.data.summary }}</p>
-        {% endif %}
-      </li>
-    {% endfor %}
-  </ul>
+  <nav class="index-nav">
+    <a href="/archive/" class="index-nav-link">All notes</a>
+    <a href="/tags/" class="index-nav-link">Tags</a>
+  </nav>
+
+  {%- set groups = collections.posts | groupByDirectory %}
+  {%- set groupKeys = groups | getKeys | sort %}
+  {%- for groupKey in groupKeys %}
+    {%- set groupPosts = groups[groupKey] %}
+    {%- set isPrivate = groupKey == "private" %}
+    <section class="post-group {% if isPrivate %}post-group-private{% endif %}">
+      <h2 class="post-group-heading">
+        {{ groupKey | groupLabel }}
+        <span class="post-group-count">{{ groupPosts.length }}</span>
+        {% if isPrivate %}<span class="post-group-badge">protected</span>{% endif %}
+      </h2>
+
+      <ul class="post-list" data-post-nav>
+        {% for post in groupPosts %}
+          <li class="post-list-item" data-post-url="{{ post.url }}">
+            <a href="{{ post.url }}" class="post-list-link">
+              <span class="post-list-title">{{ post.data.title }}</span>
+              <span class="post-list-date">{{ post.date | readableDate }}</span>
+            </a>
+            {% if post.data.summary %}
+              <p class="post-list-summary">{{ post.data.summary }}</p>
+            {% endif %}
+            {% if post.data.tags %}
+              <p class="post-list-tags">
+                {% for tag in post.data.tags | filterTagList %}
+                  <a href="/tags/{{ tag | slugify }}/" class="tag-link-inline">#{{ tag }}</a>
+                {% endfor %}
+              </p>
+            {% endif %}
+          </li>
+        {% endfor %}
+      </ul>
+    </section>
+  {%- endfor %}
 </div>

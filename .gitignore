@@ -18,3 +18,7 @@ _site/
 # OS
 .DS_Store
 Thumbs.db
+
+# Protected notes — keep this file out of the public repo
+# The Docker build reads it directly from the local checkout
+.htpasswd
