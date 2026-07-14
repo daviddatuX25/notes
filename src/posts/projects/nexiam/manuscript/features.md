@@ -1,12 +1,3 @@
----
-title: "NEXIAM Feature Inventory"
-date: 2026-07-14
-tags: [nexiam, features, securecat, development, rad]
-draft: false
-summary: "Exhaustive mapping of SecureCAT v2 codebase features to NEXIAM Scope & Limitations. Sections: carry forward as-is, extend/correct, build from scratch, remove. P0–P3 build priorities across 8-week Rapid Construction."
-layout: layouts/post.njk
----
-
 # NEXIAM Feature Inventory — From SecureCAT Codebase to NEXIAM Scope
 
 **Date:** 2026-07-14
@@ -25,6 +16,7 @@ These SecureCAT features match NEXIAM's scope directly. Minimal or no changes ne
 |---|---|---|
 | Staff login (email + password) | `AuthController@create/store`, `auth.login` route | CARRY FORWARD |
 | Staff logout | `AuthController@destroy` | CARRY FORWARD |
+| Google OAuth login | `GoogleAuthController@redirect/callback` | CARRY FORWARD |
 | Profile management (self-service) | `ProfileController@edit/update`, `/profile` routes | CARRY FORWARD |
 | Password change | `ProfileController@updatePassword` | CARRY FORWARD |
 
@@ -150,6 +142,12 @@ These features exist in SecureCAT but need changes to align with NEXIAM's Scope 
 | `applicant` | Applicant | CARRY FORWARD |
 | — | **Program Head** (new role) — view quota pipeline for their program, review cluster matches | **ADD** |
 | — | **Account creation delegated per office** — Guidance Admin creates guidance accounts, Registrar Admin creates registrar accounts | **ADD**: Scoped user creation |
+
+### B.9 Direct Assessment (Walk-in Scoring)
+
+| SecureCAT Has | NEXIAM Needs | Action |
+|---|---|---|
+| Direct assessment creation + scoring (`DirectAssessmentController@create/store`) | Same — walk-in applicant scoring, polished for faster pipeline | **EXTEND**: Polish the flow, integrate with improved one-go import pipeline. Assign applicants during import for faster batch processing. |
 
 ---
 
@@ -309,9 +307,7 @@ These features exist in NEXIAM's Scope & Limitations but have NO equivalent in S
 | Feature | Reason |
 |---|---|
 | AI Companion course recommendations | Replaced by policy-only RAG Chatbot + separate Admission Support Engines |
-| Direct Assessment (walk-in scoring) | Not in NEXIAM Scope & Limitations |
 | Multi-tenant database segregation | NEXIAM is single-campus (ISPSC Tagudin only) |
-| Google OAuth login | Not in NEXIAM scope — standard email/password only |
 | Admission Slip Templates (deprecated in SecureCAT) | Already deprecated — removed during migration |
 | Schedule: chat-based assistant UI | Keep the AI scheduling logic but simplify UI |
 
@@ -322,9 +318,9 @@ These features exist in NEXIAM's Scope & Limitations but have NO equivalent in S
 | Category | Count | Effort |
 |---|---|---|
 | **Carry forward as-is** | ~30 features | Near-zero — already built and tested |
-| **Extend / correct** | ~15 features | Medium — modify existing code, add new fields/models, adjust UI |
+| **Extend / correct** | ~16 features | Medium — modify existing code, add new fields/models, adjust UI |
 | **Build from scratch** | 11 features | High — new code, new microservice, new database tables |
-| **Remove** | ~6 features | Low — delete or deactivate |
+| **Remove** | ~4 features | Low — delete or deactivate |
 
 ### Build Priority for RAD Rapid Construction
 
