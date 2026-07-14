@@ -1,3 +1,12 @@
+---
+title: "NEXIAM Feature Inventory"
+date: 2026-07-14
+tags: [nexiam, features, securecat, development, rad]
+draft: false
+summary: "Exhaustive mapping of SecureCAT v2 codebase features to NEXIAM Scope & Limitations. Sections: carry forward as-is, extend/correct, build from scratch, remove. P0–P3 build priorities across 8-week Rapid Construction."
+layout: layouts/post.njk
+---
+
 # NEXIAM Feature Inventory — From SecureCAT Codebase to NEXIAM Scope
 
 **Date:** 2026-07-14

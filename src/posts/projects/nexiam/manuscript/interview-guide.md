@@ -1,3 +1,12 @@
+---
+title: "NEXIAM Interview Guide — Requirements Gathering"
+date: 2026-07-14
+tags: [nexiam, interview, requirements, research, rad]
+draft: false
+summary: "Role-segmented interview guide for NEXIAM Requirements Planning. Four respondent groups (Guidance, Registrar, Program Heads, Applicants) with cross-role correlation matrix. Anchored to features.md for precise feature references."
+layout: layouts/post.njk
+---
+
 # NEXIAM Requirements Gathering — Role-Segmented Interview Guide
 
 **Phase:** RAD Requirements Planning → Bridging to User Design
