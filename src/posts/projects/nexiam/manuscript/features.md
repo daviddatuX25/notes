@@ -309,7 +309,6 @@ These features exist in NEXIAM's Scope & Limitations but have NO equivalent in S
 | AI Companion course recommendations | Replaced by policy-only RAG Chatbot + separate Admission Support Engines |
 | Multi-tenant database segregation | NEXIAM is single-campus (ISPSC Tagudin only) |
 | Admission Slip Templates (deprecated in SecureCAT) | Already deprecated — removed during migration |
-| Schedule: chat-based assistant UI | Keep the AI scheduling logic but simplify UI |
 
 ---
 
@@ -320,7 +319,7 @@ These features exist in NEXIAM's Scope & Limitations but have NO equivalent in S
 | **Carry forward as-is** | ~30 features | Near-zero — already built and tested |
 | **Extend / correct** | ~16 features | Medium — modify existing code, add new fields/models, adjust UI |
 | **Build from scratch** | 11 features | High — new code, new microservice, new database tables |
-| **Remove** | ~4 features | Low — delete or deactivate |
+| **Remove** | ~3 features | Low — delete or deactivate |
 
 ### Build Priority for RAD Rapid Construction
 
