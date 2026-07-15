@@ -112,37 +112,37 @@
 // ====== 20 TASKS (corrected dates) ======
 const tasks = [
     // REQUIREMENTS PLANNING (2)
-    { name:"1. Requirements Planning — descriptive inquiry, field observation, workflow analysis, gap identification", phase:"Requirements Planning", start:1, end:6, status:"done", priority:"P0" },
-    { name:"◆ Capstone Proposal (July 7, 2026)", phase:"Requirements Planning", start:6, end:6, status:"milestone", priority:"P0" },
+    { name:"1. Requirements Planning: inquiry, observation, workflows, gaps", phase:"Requirements Planning", start:1, end:6, status:"done", priority:"P0" },
+    { name:"◆ Capstone Proposal (Jul 7, 2026)", phase:"Requirements Planning", start:6, end:6, status:"milestone", priority:"P0" },
 
     // USER DESIGN + overlapping requirements gathering (3)
-    { name:"2. User Design — RBAC schema, authorization matrix, DB design, architectural diagrams, interface mockups", phase:"User Design", start:5, end:7, status:"done", priority:"P0" },
-    { name:"3. Program Head interview + requirements gathering — cluster mapping validation", phase:"User Design", start:6, end:8, status:"active", priority:"P0" },
-    { name:"4. Core CRUD modules — Applications, Users, Courses, Rooms, Academic Years", phase:"Rapid Construction", start:5, end:7, status:"done", priority:"P0" },
+    { name:"2. User Design: RBAC schema, DB, diagrams, mockups", phase:"User Design", start:5, end:7, status:"done", priority:"P0" },
+    { name:"3. Program Head interviews + requirements gathering", phase:"User Design", start:6, end:8, status:"active", priority:"P0" },
+    { name:"4. Core CRUD: Apps, Users, Courses, Rooms, AY", phase:"Rapid Construction", start:5, end:7, status:"done", priority:"P0" },
 
     // RAPID CONSTRUCTION P0 — Core Pipeline (2)
-    { name:"5. Applicant Portal — identifier key login, mobile-first responsive, email notifications", phase:"Rapid Construction", start:7, end:9, status:"active", priority:"P0" },
-    { name:"6. RBAC role refactor + Direct Assessment polish + Google OAuth", phase:"Rapid Construction", start:8, end:9, status:"active", priority:"P0" },
+    { name:"5. Applicant Portal: identifier key, mobile, email", phase:"Rapid Construction", start:7, end:9, status:"active", priority:"P0" },
+    { name:"6. RBAC refactor + Direct Assessment + Google OAuth", phase:"Rapid Construction", start:8, end:9, status:"active", priority:"P0" },
 
     // RAPID CONSTRUCTION P1 — Defense-Critical (3)
-    { name:"7. RAG Chatbot — policy-only, confidence threshold, declines when unsure", phase:"Rapid Construction", start:9, end:11, status:"planned", priority:"P1" },
-    { name:"8. HMAC-SHA256 audit trail + Program Head & Guidance Counselor dashboards", phase:"Rapid Construction", start:9, end:11, status:"planned", priority:"P1" },
-    { name:"◆ Milestone: P0+P1 feature freeze", phase:"Rapid Construction", start:11, end:11, status:"milestone", priority:"P0" },
+    { name:"7. RAG Chatbot: policy only, confidence gated", phase:"Rapid Construction", start:9, end:11, status:"planned", priority:"P1" },
+    { name:"8. HMAC audit trail + Program Head & Guidance dashboards", phase:"Rapid Construction", start:9, end:11, status:"planned", priority:"P1" },
+    { name:"◆ P0+P1 Feature Freeze", phase:"Rapid Construction", start:11, end:11, status:"milestone", priority:"P0" },
 
     // RAPID CONSTRUCTION P2 — Admission Support Engines (3)
-    { name:"9. Computer-vision OMR engine — image scanning, bubble detection, confidence flags", phase:"Rapid Construction", start:11, end:13, status:"planned", priority:"P2" },
-    { name:"10. Engine Registry + Yukee Cluster Engine — model manifest, K-Means rule matrix", phase:"Rapid Construction", start:12, end:13, status:"planned", priority:"P2" },
-    { name:"11. BGE Interest Engine + Triage Dashboard — dual-panel aptitude & interest", phase:"Rapid Construction", start:13, end:14, status:"planned", priority:"P2" },
+    { name:"9. Computer-vision OMR: scan, detect, score", phase:"Rapid Construction", start:11, end:13, status:"planned", priority:"P2" },
+    { name:"10. Engine Registry + Yukee Cluster Engine (K-Means)", phase:"Rapid Construction", start:12, end:13, status:"planned", priority:"P2" },
+    { name:"11. BGE Interest Engine + Triage Dashboard", phase:"Rapid Construction", start:13, end:14, status:"planned", priority:"P2" },
 
     // RAPID CONSTRUCTION P3 — Polish (2)
-    { name:"12. In-App Messaging + Proctoring offline resilience (PWA service worker)", phase:"Rapid Construction", start:14, end:15, status:"planned", priority:"P3" },
-    { name:"13. Engine Manager admin panel — register, sandbox, promote, health-check models", phase:"Rapid Construction", start:14, end:15, status:"planned", priority:"P3" },
+    { name:"12. In-App Messaging + Proctoring offline (PWA)", phase:"Rapid Construction", start:14, end:15, status:"planned", priority:"P3" },
+    { name:"13. Engine Manager admin panel", phase:"Rapid Construction", start:14, end:15, status:"planned", priority:"P3" },
 
     // TRANSITION & DEFENSE (4)
-    { name:"14. Cutover — cloud deployment (Dokploy + Traefik), production readiness", phase:"Transition & Defense", start:15, end:16, status:"planned", priority:"P1" },
-    { name:"15. TAM evaluation — 271 simulated evaluators, role-based scenarios, post-test", phase:"Transition & Defense", start:16, end:17, status:"planned", priority:"P0" },
-    { name:"16. Chapter 3 manuscript — findings, conclusion, recommendations; data analysis (descriptive TAM means)", phase:"Transition & Defense", start:17, end:18, status:"planned", priority:"P0" },
-    { name:"■ 17. Defense preparation + Final Defense Presentation", phase:"Transition & Defense", start:17, end:18, status:"defense", priority:"P0" },
+    { name:"14. Cutover: cloud deploy (Dokploy)", phase:"Transition & Defense", start:15, end:16, status:"planned", priority:"P1" },
+    { name:"15. TAM evaluation: 271 evaluators, role scenarios", phase:"Transition & Defense", start:16, end:17, status:"planned", priority:"P0" },
+    { name:"16. Chapter 3 manuscript + data analysis", phase:"Transition & Defense", start:17, end:18, status:"planned", priority:"P0" },
+    { name:"■ 17. Defense prep + Final Presentation", phase:"Transition & Defense", start:17, end:18, status:"defense", priority:"P0" },
 ];
 
 // ====== RENDER ======
